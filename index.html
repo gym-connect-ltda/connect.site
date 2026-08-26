@@ -32,7 +32,7 @@
 
 <header class="nav" id="siteNav">
   <div class="wrap nav-inner">
-    <a href="#hero" class="logo"><span class="logo-mark"><img src="assets/img/logo.webp" alt="GYM CONNECT"></span>GYM CONNECT</a>
+    <a href="#hero" class="logo"><span class="logo-mark"><img src="assets/img/logo.webp" alt="GYM CONNECT"></span><span class="logo-text">GYM CONNECT</span></a>
     <div class="nav-links">
       <a href="#features">Funcionalidades</a>
       <a href="#access">Controle de acesso</a>
@@ -40,8 +40,9 @@
       <a href="#proof">Clientes</a>
     </div>
     <div class="nav-cta">
-      <a href="#" class="btn btn-ghost">Entrar</a>
-      <a href="#cta-final" class="btn btn-primary">Agendar demonstração</a>
+      <a href="#" class="nav-link-plain">Entrar</a>
+      <span class="nav-cta-sep">|</span>
+      <a href="#" class="nav-link-accent">Criar uma conta</a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
   </div>
@@ -53,7 +54,10 @@
   <a href="#access">Controle de acesso</a>
   <a href="#benefits">Benefícios</a>
   <a href="#proof">Clientes</a>
-  <a href="#cta-final" class="btn btn-primary" style="margin-top:10px;">Agendar demonstração</a>
+  <div class="mobile-auth">
+    <a href="#" class="nav-link-plain">Entrar</a>
+    <a href="#" class="btn btn-primary">Criar uma conta</a>
+  </div>
 </div>
 
 <main>
@@ -66,9 +70,9 @@
         <h1>Sua academia <span class="hl">conectada</span>, do cadastro à catraca.</h1>
         <p class="lead">Otimizamos a gestão da sua academia, simplificando o controle de pagamentos e fortalecendo a sua conexão com os seus clientes.</p>
         <div class="hero-ctas">
-          <a href="#cta-final" class="btn btn-primary">Agende uma demonstração
+          <button type="button" class="btn btn-primary js-open-demo-modal">Agende uma demonstração
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          </button>
           <a href="#features" class="btn btn-ghost">Conheça a plataforma</a>
         </div>
 
@@ -348,7 +352,7 @@
         <h2>Comece a transformar a gestão da sua academia.</h2>
         <p>Agende uma demonstração e veja como a GYM CONNECT conecta alunos, financeiro e controle de acesso em uma única plataforma.</p>
         <div class="btns">
-          <a href="#" class="btn btn-lime">Agende uma demonstração</a>
+          <button type="button" class="btn btn-lime js-open-demo-modal">Agende uma demonstração</button>
           <a href="#" class="btn btn-outline-dark">Quero conhecer o sistema</a>
         </div>
       </div>
@@ -360,7 +364,7 @@
   <div class="wrap">
     <div class="foot-top">
       <div class="foot-brand">
-        <a href="#hero" class="logo"><span class="logo-mark"><img src="assets/img/logo.webp" alt="GYM CONNECT"></span>GYM CONNECT</a>
+        <a href="#hero" class="logo"><span class="logo-mark"><img src="assets/img/logo.webp" alt="GYM CONNECT"></span><span class="logo-text">GYM CONNECT</span></a>
         <p>Software de gestão para academias e negócios fitness — alunos, financeiro, filiais e controle de acesso, em uma única plataforma.</p>
       </div>
       <div class="foot-col">
@@ -396,6 +400,96 @@
 </footer>
 
  <script src="./assets/js/script.js"></script>
+
+<!-- Modal: Agendar demonstração -->
+<div class="modal-overlay" id="demoModalOverlay">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+    <button type="button" class="modal-close" id="demoModalClose" aria-label="Fechar">×</button>
+    <span class="eyebrow">Agende sua demonstração</span>
+    <h3 id="demoModalTitle">Vamos falar sobre a sua academia</h3>
+    <p class="modal-sub">Preencha seus dados abaixo e nossa equipe entra em contato pelo WhatsApp para agendar sua demonstração.</p>
+
+    <form id="demoForm" class="modal-form">
+      <div class="field">
+        <label for="demoName">Nome</label>
+        <input type="text" id="demoName" name="nome" placeholder="Seu nome completo" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="demoWhats">WhatsApp</label>
+        <input type="tel" id="demoWhats" name="whatsapp" placeholder="(00) 00000-0000" autocomplete="tel" required>
+      </div>
+      <button type="submit" class="btn btn-primary modal-submit">Enviar
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+
+    <div class="modal-success" id="demoSuccess" hidden>
+      <svg width="42" height="42" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#4FD227" stroke-width="1.5"/><path d="M7 12l3 3 7-7" stroke="#4FD227" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h4>Recebemos seus dados!</h4>
+      <p>Nossa equipe vai chamar você no WhatsApp em breve para agendar a demonstração.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var triggers = document.querySelectorAll('.js-open-demo-modal');
+  var overlay = document.getElementById('demoModalOverlay');
+  var closeBtn = document.getElementById('demoModalClose');
+  var form = document.getElementById('demoForm');
+  var successBox = document.getElementById('demoSuccess');
+  if(!overlay) return;
+
+  function openModal(e){
+    if(e) e.preventDefault();
+    overlay.classList.add('open');
+    document.body.classList.add('modal-open');
+    form.hidden = false;
+    successBox.hidden = true;
+    var firstInput = document.getElementById('demoName');
+    setTimeout(function(){ if(firstInput) firstInput.focus(); }, 250);
+  }
+
+  function closeModal(){
+    overlay.classList.remove('open');
+    document.body.classList.remove('modal-open');
+  }
+
+  triggers.forEach(function(t){ t.addEventListener('click', openModal); });
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function(e){ if(e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && overlay.classList.contains('open')) closeModal(); });
+
+  // Máscara do WhatsApp: (00) 00000-0000 (celular) ou (00) 0000-0000 (fixo)
+  var whatsInput = document.getElementById('demoWhats');
+  if(whatsInput){
+    whatsInput.addEventListener('input', function(){
+      var digits = whatsInput.value.replace(/\D/g, '').slice(0, 11);
+      var out = digits;
+      if(digits.length > 0) out = '(' + digits.substring(0, 2);
+      if(digits.length >= 3) out += ') ' + digits.substring(2, digits.length <= 10 ? 6 : 7);
+      if(digits.length > 6 && digits.length <= 10) out += '-' + digits.substring(6, 10);
+      if(digits.length > 7 && digits.length > 10) out += '-' + digits.substring(7, 11);
+      whatsInput.value = out;
+    });
+  }
+
+  var closeTimer = null;
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    // TODO: integrar este envio com seu backend / CRM / webhook para receber nome e whatsapp
+    form.hidden = true;
+    successBox.hidden = false;
+    form.reset();
+    closeTimer = setTimeout(closeModal, 2200);
+  });
+
+  // Se o usuário fechar manualmente enquanto a mensagem de sucesso ainda está visível, cancela o fechamento automático
+  closeBtn.addEventListener('click', function(){ if(closeTimer) clearTimeout(closeTimer); });
+  overlay.addEventListener('click', function(e){ if(e.target === overlay && closeTimer) clearTimeout(closeTimer); });
+})();
+</script>
 
 </body>
 </html>
