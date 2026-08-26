@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GYM CONNECT — Sua academia conectada, do cadastro à catraca</title>
+<meta name="description" content="GYM CONNECT é o software de gestão que centraliza alunos, financeiro, filiais e controle de acesso da sua academia em uma única plataforma.">
+<meta property="og:title" content="GYM CONNECT — Software de gestão para academias">
+<meta property="og:description" content="Centralize alunos, financeiro, filiais e controle de acesso por catraca em uma única plataforma.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<!-- Checkpoint rail -->
+<nav class="rail" aria-hidden="true">
+  <div class="rail-node active" data-label="hero" data-target="hero"></div>
+  <div class="rail-line"></div>
+  <div class="rail-node" data-label="dores" data-target="problem"></div>
+  <div class="rail-line"></div>
+  <div class="rail-node" data-label="módulos" data-target="features"></div>
+  <div class="rail-line"></div>
+  <div class="rail-node" data-label="acesso" data-target="access"></div>
+  <div class="rail-line"></div>
+  <div class="rail-node" data-label="benefícios" data-target="benefits"></div>
+  <div class="rail-line"></div>
+  <div class="rail-node" data-label="contato" data-target="cta-final"></div>
+</nav>
+
+<header class="nav" id="siteNav">
+  <div class="wrap nav-inner">
+    <a href="#hero" class="logo"><span class="logo-mark"><img src="assets/img/logo.webp" alt="GYM CONNECT"></span>GYM CONNECT</a>
+    <div class="nav-links">
+      <a href="#features">Funcionalidades</a>
+      <a href="#access">Controle de acesso</a>
+      <a href="#benefits">Benefícios</a>
+      <a href="#proof">Clientes</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-ghost">Entrar</a>
+      <a href="#cta-final" class="btn btn-primary">Agendar demonstração</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Fechar menu">×</button>
+  <a href="#features">Funcionalidades</a>
+  <a href="#access">Controle de acesso</a>
+  <a href="#benefits">Benefícios</a>
+  <a href="#proof">Clientes</a>
+  <a href="#cta-final" class="btn btn-primary" style="margin-top:10px;">Agendar demonstração</a>
+</div>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-bg"></div>
+    <img class="watermark" src="assets/img/logo.webp" alt="" aria-hidden="true">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <h1>Sua academia <span class="hl">conectada</span>, do cadastro à catraca.</h1>
+        <p class="lead">Otimizamos a gestão da sua academia, simplificando o controle de pagamentos e fortalecendo a sua conexão com os seus clientes.</p>
+        <div class="hero-ctas">
+          <a href="#cta-final" class="btn btn-primary">Agende uma demonstração
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#features" class="btn btn-ghost">Conheça a plataforma</a>
+        </div>
+
+      </div>
+      <div class="hero-visual reveal">
+        <div class="dash-card">
+          <div class="dash-topbar">
+            <span class="tdot"></span><span class="tdot"></span><span class="tdot"></span>
+          </div>
+          <div class="dash-body">
+            <div class="dash-side">
+              <div class="ic active">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="5" fill="#12210C"/></svg>
+              </div>
+              <div class="ic"></div><div class="ic"></div><div class="ic"></div><div class="ic"></div>
+            </div>
+            <div class="dash-main">
+              <div class="dash-kpis">
+                <div class="kpi"><div class="n">312</div><div class="l">Alunos ativos</div></div>
+                <div class="kpi"><div class="n">4</div><div class="l">Unidades</div></div>
+                <div class="kpi"><div class="n">96%</div><div class="l">Adimplência</div></div>
+              </div>
+              <div class="dash-chart">
+                <i style="height:40%"></i><i style="height:65%"></i><i style="height:50%"></i>
+                <i style="height:80%"></i><i style="height:60%"></i><i style="height:92%"></i><i style="height:70%"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="float-chip chip-access"><span class="fdot"></span><span>Acesso liberado</span></div>
+        <div class="float-chip chip-pay"><span class="fdot"></span><span>Pagamento confirmado</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA -->
+  <section class="section problem" id="problem">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">O dia a dia sem um sistema centralizado</span>
+        <h2>Sua academia ainda depende de planilhas, grupos de WhatsApp e processos manuais?</h2>
+        <p>Cada sistema separado é um ponto cego a mais na gestão, e o tempo que deveria ir para o aluno, some em tarefas operacionais.</p>
+      </div>
+      <div class="problem-grid reveal">
+        <div class="problem-cell">
+          <svg class="pi" viewBox="0 0 24 24" fill="none"><path d="M4 4h7v7H4V4zM13 4h7v7h-7V4zM4 13h7v7H4v-7zM13 13h7v7h-7v-7z" stroke="#29451F" stroke-width="1.4"/></svg>
+          <p>Informações de alunos espalhadas entre planilhas, cadernos e sistemas diferentes.</p>
+        </div>
+        <div class="problem-cell">
+          <svg class="pi" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M5 8h9a3 3 0 010 6H8a3 3 0 000 6h9" stroke="#29451F" stroke-width="1.4" stroke-linecap="round"/></svg>
+          <p>Falta de visão clara sobre pagamentos, inadimplência e fluxo de caixa.</p>
+        </div>
+        <div class="problem-cell">
+          <svg class="pi" viewBox="0 0 24 24" fill="none"><rect x="3" y="8" width="18" height="12" rx="2" stroke="#29451F" stroke-width="1.4"/><path d="M8 8V6a4 4 0 018 0v2" stroke="#29451F" stroke-width="1.4"/></svg>
+          <p>Controle de acesso da catraca desconectado do cadastro e da situação financeira.</p>
+        </div>
+        <div class="problem-cell">
+          <svg class="pi" viewBox="0 0 24 24" fill="none"><path d="M3 12h4l2-7 4 14 2-7h6" stroke="#29451F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p>Gerenciar várias unidades exige repetir o mesmo processo em cada uma.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bridge wrap reveal">
+    <p>A GYM CONNECT existe para resolver isso: <span class="lime">um único sistema</span> conectando pessoas, gestão, pagamentos e acesso.</p>
+  </div>
+
+  <!-- FUNCIONALIDADES -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">A plataforma</span>
+        <h2>Tudo o que sua academia precisa, em um único lugar.</h2>
+        <p>Módulos pensados para o dia a dia de quem administra. De uma unidade a uma rede inteira.</p>
+      </div>
+
+      <div class="bento reveal">
+        <div class="feat f-1">
+          <div>
+            <div class="feat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 21c0-4 3.5-7 8-7s8 3 8 7" stroke="#64FA35" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3>Gestão de alunos</h3>
+            <p>Cadastro, histórico completo e fidelização em um só painel sem precisar consultar três sistemas diferentes.</p>
+          </div>
+          <ul class="mini-list">
+            <li><span class="ok"></span> <b>Histórico</b> de treinos, planos e frequência</li>
+            <li><span class="ok"></span> <b>Situação financeira</b> vinculada ao cadastro</li>
+            <li><span class="ok"></span> <b>Acompanhamento</b> de fidelização e retenção</li>
+          </ul>
+        </div>
+
+        <div class="feat f-2">
+          <div class="feat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 10h18M7 15h4" stroke="#29451F" stroke-width="1.6" stroke-linecap="round"/><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="#29451F" stroke-width="1.6"/></svg></div>
+          <h3>Gestão financeira</h3>
+          <p>Fluxo de caixa, cobranças e controle de inadimplência com visão clara da saúde do negócio.</p>
+        </div>
+
+        <div class="feat f-3">
+          <div class="feat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="#29451F" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <h3>Pagamentos</h3>
+          <p>Integração com gateways de pagamento para facilitar a cobrança e reduzir a inadimplência.</p>
+        </div>
+
+        <div class="feat f-4">
+          <div class="feat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 21V9l9-6 9 6v12" stroke="#29451F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21v-6h6v6" stroke="#29451F" stroke-width="1.6"/></svg></div>
+          <h3>Gestão de filiais</h3>
+          <p>Administre múltiplas unidades a partir de uma única plataforma, com visão consolidada e por unidade.</p>
+        </div>
+
+        <div class="feat f-5">
+          <div class="feat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6l8-4z" stroke="#29451F" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+          <h3>Controle de acesso</h3>
+          <p>Integração com catracas e biometria para liberar o acesso com base na situação do aluno.</p>
+        </div>
+
+        <div class="feat f-6">
+          <div class="feat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 10-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z" stroke="#29451F" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+          <h3>Fidelização</h3>
+          <p>Mais informações sobre cada aluno para fortalecer o relacionamento e reduzir a evasão.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETALHE: ALUNOS -->
+  <section class="wrap">
+    <div class="detail-row reveal">
+      <div class="detail-copy">
+        <span class="eyebrow">Gestão de alunos</span>
+        <h3>Cada aluno, com histórico completo, em um único cadastro.</h3>
+        <p>Plano, frequência, pagamentos e situação de acesso — tudo conectado ao mesmo perfil, sem precisar cruzar informações entre sistemas diferentes.</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="#4FD227"/><path d="M5 8l2 2 4-4" stroke="#4FD227" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Histórico completo de cada aluno</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="#4FD227"/><path d="M5 8l2 2 4-4" stroke="#4FD227" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Situação financeira vinculada ao cadastro</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="#4FD227"/><path d="M5 8l2 2 4-4" stroke="#4FD227" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Gestão de usuários e permissões da equipe</li>
+        </ul>
+      </div>
+      <div class="detail-visual">
+        <div class="panel">
+          <div class="panel-head"><span class="ptitle">Alunos · Unidade Centro</span><span class="status ok">96% adimplência</span></div>
+          <div class="row-item"><div class="avatar"></div><div class="rt"><div class="rname">Camila Souza</div><div class="rsub">Plano anual · desde mar/24</div></div><span class="status ok">Em dia</span></div>
+          <div class="row-item"><div class="avatar"></div><div class="rt"><div class="rname">Rafael Lima</div><div class="rsub">Plano mensal · desde jun/25</div></div><span class="status ok">Em dia</span></div>
+          <div class="row-item"><div class="avatar"></div><div class="rt"><div class="rname">Bianca Torres</div><div class="rsub">Plano trimestral · desde fev/25</div></div><span class="status warn">Pendente</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DETALHE: FINANCEIRO -->
+    <div class="detail-row rev reveal">
+      <div class="detail-copy">
+        <span class="eyebrow">Gestão financeira</span>
+        <h3>Fluxo de caixa e inadimplência, sem depender de planilhas.</h3>
+        <p>Acompanhe entradas, saídas e cobranças em tempo real, com visão consolidada de todas as unidades.</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="#4FD227"/><path d="M5 8l2 2 4-4" stroke="#4FD227" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Fluxo de caixa atualizado automaticamente</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="#4FD227"/><path d="M5 8l2 2 4-4" stroke="#4FD227" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Controle de inadimplência por aluno</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="#4FD227"/><path d="M5 8l2 2 4-4" stroke="#4FD227" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Integração com gateways de pagamento</li>
+        </ul>
+      </div>
+      <div class="detail-visual">
+        <div class="panel">
+          <div class="panel-head"><span class="ptitle">Fluxo de caixa · últimos 7 dias</span></div>
+          <div class="fin-graph">
+            <div class="bar" style="height:45%"></div>
+            <div class="bar up" style="height:70%"></div>
+            <div class="bar" style="height:38%"></div>
+            <div class="bar up" style="height:88%"></div>
+            <div class="bar up" style="height:60%"></div>
+            <div class="bar" style="height:50%"></div>
+            <div class="bar up" style="height:95%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DETALHE: FILIAIS -->
+    <div class="detail-row reveal">
+      <div class="detail-copy">
+        <span class="eyebrow">Gestão de filiais</span>
+        <h3>Uma rede inteira, administrada a partir de um só lugar.</h3>
+        <p>Acompanhe o desempenho de cada unidade individualmente ou tenha a visão consolidada de toda a rede.</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="#4FD227"/><path d="M5 8l2 2 4-4" stroke="#4FD227" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Visão consolidada e por unidade</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="#4FD227"/><path d="M5 8l2 2 4-4" stroke="#4FD227" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Gestão de usuários e permissões por filial</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="#4FD227"/><path d="M5 8l2 2 4-4" stroke="#4FD227" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Operação padronizada entre unidades</li>
+        </ul>
+      </div>
+      <div class="detail-visual">
+        <div class="branch-map">
+          <div class="branch-pin" data-city="Centro" style="top:40%; left:30%;"></div>
+          <div class="branch-pin" data-city="Zona Sul" style="top:65%; left:60%;"></div>
+          <div class="branch-pin" data-city="Norte" style="top:25%; left:70%;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTROLE DE ACESSO -->
+  <section class="section access" id="access">
+    <img class="watermark" src="assets/img/logo.webp" alt="" aria-hidden="true">
+    <div class="wrap access-inner">
+      <div class="section-head reveal">
+        <span class="eyebrow on-dark">Diferencial GYM CONNECT</span>
+        <h2>Sua academia conectada do cadastro à catraca.</h2>
+        <p>O controle de acesso não fica isolado: ele conversa diretamente com o cadastro e a situação financeira do aluno.</p>
+      </div>
+
+      <div class="flow reveal">
+        <div class="flow-step">
+          <span class="fn">CADASTRO</span>
+          <h4>Aluno cadastrado</h4>
+          <p>Todas as informações do aluno centralizadas na plataforma.</p>
+        </div>
+        <div class="flow-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M14 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="flow-step">
+          <span class="fn">FINANCEIRO</span>
+          <h4>Situação financeira</h4>
+          <p>O sistema verifica automaticamente a situação de pagamento do aluno.</p>
+        </div>
+        <div class="flow-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M14 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="flow-step">
+          <span class="fn">VALIDAÇÃO</span>
+          <h4>Validação em tempo real</h4>
+          <p>A plataforma cruza cadastro e situação financeira antes de liberar o acesso.</p>
+        </div>
+        <div class="flow-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M14 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="flow-step">
+          <span class="fn">ACESSO</span>
+          <h4>Acesso liberado</h4>
+          <p>Integração com catracas e dispositivos de biometria libera a entrada.</p>
+        </div>
+      </div>
+
+      <span class="access-tag reveal">◆ Integrado com catracas e reconhecimento biométrico</span>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="section benefits" id="benefits">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Resultado para a gestão</span>
+        <h2>O que muda no dia a dia da sua academia.</h2>
+      </div>
+      <div class="benefit-grid reveal">
+        <div class="benefit"><span class="bnum">GESTÃO</span><h4>Operação centralizada</h4><p>Alunos, financeiro, filiais e acesso em um só lugar.</p></div>
+        <div class="benefit"><span class="bnum">TEMPO</span><h4>Menos tarefas manuais</h4><p>Menos tempo em planilhas, mais tempo com o aluno.</p></div>
+        <div class="benefit"><span class="bnum">FINANCEIRO</span><h4>Visão financeira clara</h4><p>Acompanhamento de pagamentos e inadimplência em tempo real.</p></div>
+        <div class="benefit"><span class="bnum">SEGURANÇA</span><h4>Acesso mais seguro</h4><p>Controle de entrada conectado à situação real do aluno.</p></div>
+        <div class="benefit"><span class="bnum">EXPANSÃO</span><h4>Pronto para crescer</h4><p>Gerencie uma unidade ou uma rede inteira sem trocar de sistema.</p></div>
+        <div class="benefit"><span class="bnum">RELACIONAMENTO</span><h4>Mais fidelização</h4><p>Mais informações sobre o aluno para fortalecer o vínculo.</p></div>
+        <div class="benefit"><span class="bnum">EQUIPE</span><h4>Times mais organizados</h4><p>Permissões e usuários organizados por unidade e função.</p></div>
+        <div class="benefit"><span class="bnum">CONTROLE</span><h4>Decisões com mais dados</h4><p>Toda a operação visível, para decidir com mais segurança.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROVA SOCIAL -->
+  <!-- <section class="section proof" id="proof">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin:0 auto 48px; text-align:center;">
+        <span class="eyebrow">Confiança</span>
+        <h2>Academias e redes que confiam na GYM CONNECT</h2>
+      </div>
+      <div class="proof-box reveal">
+        <h3>Espaço reservado para clientes e depoimentos</h3>
+        <p>Assim que tivermos cases, logos e depoimentos reais de academias parceiras, eles entram aqui.</p>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- CTA FINAL -->
+  <section class="section" id="cta-final" style="padding-bottom:120px;">
+    <div class="final-cta reveal">
+      <div class="final-cta-inner">
+        <span class="eyebrow on-dark">Comece agora</span>
+        <h2>Comece a transformar a gestão da sua academia.</h2>
+        <p>Agende uma demonstração e veja como a GYM CONNECT conecta alunos, financeiro e controle de acesso em uma única plataforma.</p>
+        <div class="btns">
+          <a href="#" class="btn btn-lime">Agende uma demonstração</a>
+          <a href="#" class="btn btn-outline-dark">Quero conhecer o sistema</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="#hero" class="logo"><span class="logo-mark"><img src="assets/img/logo.webp" alt="GYM CONNECT"></span>GYM CONNECT</a>
+        <p>Software de gestão para academias e negócios fitness — alunos, financeiro, filiais e controle de acesso, em uma única plataforma.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Plataforma</h5>
+        <ul>
+          <li><a href="#features">Gestão de alunos</a></li>
+          <li><a href="#features">Financeiro</a></li>
+          <li><a href="#access">Controle de acesso</a></li>
+          <li><a href="#features">Filiais</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="#benefits">Benefícios</a></li>
+          <li><a href="#proof">Clientes</a></li>
+          <li><a href="#cta-final">Demonstração</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Contato</h5>
+        <ul>
+          <li><a href="mailto:contato@gymconnect.app">contato@gymconnect.app</a></li>
+          <li><a href="#cta-final">Fale com a gente</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 GYM CONNECT. Todos os direitos reservados.</span>
+      <span>Feito para academias que querem crescer com organização.</span>
+    </div>
+  </div>
+</footer>
+
+ <script src="./assets/js/script.js"></script>
+
+</body>
+</html>
