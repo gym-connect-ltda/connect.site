@@ -1,4 +1,19 @@
 (function(){
+  // Keep the entrance brief, with a hard fallback in the document head.
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var dismissLoader = function(){
+    var elapsed = Date.now() - (window.gymLoaderStarted || Date.now());
+    setTimeout(function(){
+      document.documentElement.classList.remove('is-loading');
+      clearTimeout(window.gymLoaderFallback);
+    }, Math.max(0, (reducedMotion ? 0 : 4000) - elapsed));
+  };
+  if(document.readyState === 'complete'){
+    dismissLoader();
+  } else {
+    window.addEventListener('load', dismissLoader, {once:true});
+  }
+
   // Nav scroll state
   var nav = document.getElementById('siteNav');
   var onScroll = function(){

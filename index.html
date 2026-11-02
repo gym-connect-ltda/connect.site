@@ -2,6 +2,13 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      document.documentElement.classList.add("is-loading");
+      window.gymLoaderStarted = Date.now();
+      window.gymLoaderFallback = setTimeout(function () {
+        document.documentElement.classList.remove("is-loading");
+      }, 6500);
+    </script>
     <link rel="icon" type="image/webp" href="./assets/img/logo.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GYM CONNECT — Sua academia conectada, do cadastro à catraca</title>
@@ -28,6 +35,22 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+    <div
+      class="preloader"
+      id="preloader"
+      role="status"
+      aria-label="Carregando Gym Connect"
+    >
+      <div class="preloader-inner" aria-hidden="true">
+        <div class="preloader-mark">
+          <span class="preloader-arrow preloader-arrow-top"></span>
+          <span class="preloader-arrow preloader-arrow-bottom"></span>
+        </div>
+        <span class="preloader-name">GYM <strong>CONNECT</strong></span>
+        <div class="preloader-track"><span></span></div>
+        <span class="preloader-caption">Aguarde, carregando..</span>
+      </div>
+    </div>
     <!-- Checkpoint rail -->
     <nav class="rail" aria-hidden="true">
       <div class="rail-node active" data-label="hero" data-target="hero"></div>
@@ -55,17 +78,20 @@
           ><span class="logo-text">GYM CONNECT</span></a
         >
         <div class="nav-links">
+          <a href="#hero">Home</a>
           <a href="#features">Funcionalidades</a>
+          <a href="#partnership">Parcerias</a>
           <a href="#access">Controle de acesso</a>
           <a href="#benefits">Benefícios</a>
-          <a href="#proof">Clientes</a>
         </div>
         <div class="nav-cta">
           <a href="https://app.gymconect.com.br/" class="nav-link-plain"
             >Entrar</a
           >
           <span class="nav-cta-sep">|</span>
-          <a href="#" class="nav-link-accent">Criar uma conta</a>
+          <a href="https://app.gymconect.com.br/login" class="nav-link-accent"
+            >Criar uma conta</a
+          >
         </div>
         <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
           <span></span><span></span><span></span>
@@ -77,13 +103,16 @@
       <button class="mobile-close" id="mobileClose" aria-label="Fechar menu">
         ×
       </button>
+      <a href="#hero">Home</a>
       <a href="#features">Funcionalidades</a>
+      <a href="#partnership">Parcerias</a>
       <a href="#access">Controle de acesso</a>
       <a href="#benefits">Benefícios</a>
-      <a href="#proof">Clientes</a>
       <div class="mobile-auth">
         <a href="#" class="nav-link-plain">Entrar</a>
-        <a href="#" class="btn btn-primary">Criar uma conta</a>
+        <a href="https://app.gymconect.com.br/login" class="btn btn-primary"
+          >Criar uma conta</a
+        >
       </div>
     </div>
 
@@ -673,6 +702,41 @@
             </div>
           </div>
         </div>
+        <!-- DETALHE: PAGAMENTOS ASAAS -->
+        <div
+          class="detail-row partnership reveal"
+          id="partnership"
+          aria-labelledby="partnership-title"
+        >
+          <div class="detail-visual">
+            <img
+              class="partnership-banner"
+              src="./assets/img/parceria-asaas.png"
+              alt="GYM CONNECT e Asaas. Parceria estratégica. Gestão inteligente. Financeiro conectado."
+              width="1800"
+              height="760"
+              loading="lazy"
+            />
+          </div>
+          <div class="detail-copy">
+            <span class="eyebrow">Pagamentos integrados</span>
+
+            <h3 id="partnership-title">
+              Gym Connect e Asaas: uma parceria estratégica para a sua gestão
+              financeira.
+            </h3>
+            <p>
+              Como gateway de pagamento oficial do Gym Connect, o Asaas conecta
+              o processamento de pagamentos à gestão da sua academia. Essa
+              parceria une tecnologia de gestão e soluções financeiras para
+              simplificar a operação, reduzir tarefas administrativas e apoiar o
+              crescimento do seu negócio.
+            </p>
+            <button type="button" class="btn btn-ghost js-open-demo-modal">
+              Conheça a integração
+            </button>
+          </div>
+        </div>
       </section>
 
       <!-- CONTROLE DE ACESSO -->
@@ -883,6 +947,7 @@
             <h5>Empresa</h5>
             <ul>
               <li><a href="#benefits">Benefícios</a></li>
+              <li><a href="#partnership">Parceria com o Asaas</a></li>
               <li><a href="./politica.html">Política</a></li>
               <li><a href="./termos.html">Termos</a></li>
             </ul>

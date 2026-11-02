@@ -1,3 +1,27 @@
+/* CSS logo: two opposing arrows assemble on a black stage. */
+.preloader{position:fixed; inset:0; z-index:1000; display:flex; align-items:center; justify-content:center; background:#000; color:#6DE838; opacity:0; visibility:hidden; pointer-events:none; transition:opacity .55s ease, visibility .55s ease;}
+.is-loading .preloader{opacity:1; visibility:visible; pointer-events:auto;}
+html.is-loading{overflow:hidden;}
+.preloader-inner{display:flex; flex-direction:column; align-items:center; padding:32px;}
+.preloader-mark{position:relative; width:156px; height:132px; margin-bottom:30px; filter:drop-shadow(0 0 20px rgba(109,232,56,.16));}
+.preloader-arrow{position:absolute; left:0; width:156px; height:62px; background:currentColor; clip-path:polygon(34% 0,48% 27%,40% 44%,96% 44%,100% 48%,100% 94%,96% 100%,4% 100%,0 94%,0 84%);}
+.preloader-arrow-top{top:0; animation:loader-assemble-top 1.6s cubic-bezier(.22,1,.36,1) both;}
+.preloader-arrow-bottom{bottom:0; transform:rotate(180deg); animation:loader-assemble-bottom 1.6s cubic-bezier(.22,1,.36,1) both;}
+.preloader-name{font-family:var(--disp); font-weight:500; font-size:17px; letter-spacing:.18em; animation:loader-label 1.2s ease both;}
+.preloader-name strong{font-weight:700;}
+.preloader-track{width:156px; height:2px; background:rgba(109,232,56,.14); margin:24px 0 14px; overflow:hidden; border-radius:2px;}
+.preloader-track span{display:block; height:100%; width:45%; background:currentColor; animation:loader-scan 1.2s ease-in-out infinite;}
+.preloader-caption{font-family:var(--body); font-size:11px; letter-spacing:.08em; color:#90998b; animation:loader-label 1.2s ease both;}
+@keyframes loader-assemble-top{0%{opacity:0; transform:translate(70px,-24px);} 50%,72%{opacity:1; transform:translate(0,0);} 86%{transform:translate(-5px,0);} 100%{transform:translate(0,0);}}
+@keyframes loader-assemble-bottom{0%{opacity:0; transform:translate(-70px,24px) rotate(180deg);} 50%,72%{opacity:1; transform:translate(0,0) rotate(180deg);} 86%{transform:translate(5px,0) rotate(180deg);} 100%{transform:translate(0,0) rotate(180deg);}}
+@keyframes loader-label{from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:translateY(0);}}
+@keyframes loader-scan{from{transform:translateX(-110%);} to{transform:translateX(330%);}}
+@media (prefers-reduced-motion:reduce){.preloader{transition:none;}.preloader-arrow,.preloader-name,.preloader-caption,.preloader-track span{animation:none;}}
+
+/* Partnership */
+.partnership{scroll-margin-top:90px;}
+.partnership-banner{width:100%; height:auto; border:1px solid var(--line); border-radius:var(--radius);}
+
 :root{
   --bg:#090909;
   --paper:#121212;
